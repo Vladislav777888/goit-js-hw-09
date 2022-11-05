@@ -11,11 +11,11 @@ class ColorSwitcher {
   }
 
   setAttribute() {
-    this.stopBtn.setAttribute('disabled', 'disabled');
+    this.stopBtn.setAttribute('disabled', true);
   }
 
   onStartBtn(evt) {
-    evt.target.setAttribute('disabled', 'disabled');
+    evt.target.setAttribute('disabled', true);
     this.stopBtn.removeAttribute('disabled');
 
     this.timerId = setInterval(() => {
@@ -25,7 +25,7 @@ class ColorSwitcher {
 
   onStopBtn(evt) {
     clearInterval(this.timerId);
-    evt.target.setAttribute('disabled', 'disabled');
+    evt.target.setAttribute('disabled', true);
     this.startBtn.removeAttribute('disabled');
   }
 
